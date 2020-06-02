@@ -18,11 +18,12 @@
             <property name="can_focus">False</property>
             <property name="layout_style">end</property>
             <child>
-              <object class="GtkButton">
-                <property name="label" translatable="yes">SHUT DOWN</property>
+              <object class="GtkButton" id="shutBT">
+                <property name="label" translatable="yes">REBOOT</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <signal name="pressed" handler="shut" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">True</property>
@@ -84,11 +85,12 @@
               </packing>
             </child>
             <child>
-              <object class="GtkButton">
+              <object class="GtkButton" id="desktop">
                 <property name="label" translatable="yes">Pangolin Desktop [DEFAULT]</property>
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
+                <signal name="pressed" handler="desktop" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -97,11 +99,11 @@
                 <property name="position">2</property>
               </packing>
             </child>
-            <child>
+           <!-- <child>
               <object class="GtkButton">
                 <property name="label" translatable="yes">Pangolin Mobile</property>
-                <property name="visible">True</property>
-                <property name="can_focus">True</property>
+                <property name="visible">False</property>
+                <property name="can_focus">False</property>
                 <property name="receives_default">True</property>
               </object>
               <packing>
@@ -124,7 +126,7 @@
                 <property name="padding">3</property>
                 <property name="position">4</property>
               </packing>
-            </child>
+            </child>-->
           </object>
           <packing>
             <property name="expand">False</property>

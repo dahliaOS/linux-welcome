@@ -11,7 +11,21 @@ class Handler:
         Gtk.main_quit()
 
     def onButtonPressed(self, terminalBT):
-        print("Hello World!")
+        print("xterm")
+        subprocess.run('xterm',
+        shell=True,
+        # Probably don't forget these, too
+        check=True, text=True)
+
+    def shut(self, shutBT):
+        print("shutdown")
+        subprocess.run('xterm',
+        shell=True,
+        # Probably don't forget these, too
+        check=True, text=True)
+    
+    def desktop(self, desktop):
+        print("desktop")
         subprocess.run('xterm',
         shell=True,
         # Probably don't forget these, too
