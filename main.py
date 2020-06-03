@@ -1,3 +1,4 @@
+#!/bin/env python
 import gi
 bashCommand = "cwm --rdf test.rdf --ntriples > test.nt"
 import subprocess
@@ -12,7 +13,7 @@ class Handler:
 
     def onButtonPressed(self, terminalBT):
         print("xterm")
-        subprocess.run('xterm',
+        subprocess.run('xterm &',
         shell=True,
         # Probably don't forget these, too
         check=True, text=True)
