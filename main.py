@@ -3,7 +3,7 @@ import gi
 bashCommand = "cwm --rdf test.rdf --ntriples > test.nt"
 import subprocess
 
-gi.require_version("Gtk", "3.0")
+gi.require_version("Gtk", "2.0")
 from gi.repository import Gtk
 
 
